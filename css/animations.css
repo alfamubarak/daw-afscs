@@ -1,0 +1,10 @@
+/* Ambient CSS motion (paused when ambient is off, hidden, or reduced-motion is requested) */
+@keyframes sweep{to{transform:rotate(360deg)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(168,216,248,.55)}80%,100%{box-shadow:0 0 0 1.8rem rgba(168,216,248,0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinr{to{transform:rotate(-360deg)}}
+.r1{animation:spin 60s linear infinite}.r2{animation:spinr 80s linear infinite}.r3{animation:spin 110s linear infinite}
+.card .portrait::after,.fcard .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.14) 50%,transparent 60%);transform:translateX(-120%);transition:transform .9s var(--ease)}
+.card:hover .portrait::after,.fcard:hover .portrait::after{transform:translateX(120%)}
+body.no-ambient .bg-radar i,body.no-ambient .ring,body.no-ambient .w-hint i{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.bg-radar i,.ring,.w-hint i{animation:none}*{transition-duration:.01ms!important}}

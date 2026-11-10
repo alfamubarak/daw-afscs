@@ -1,0 +1,97 @@
+/* AFCSC DAW — cinematic video welcome. Scoped styles keep every archive screen unchanged.
+   The crest is preserved, footage is a local MP4; no CDN or runtime network calls. */
+#welcome.welcome-film{isolation:isolate;padding:0;overflow:hidden;background:#050b1a;touch-action:manipulation}
+.welcome-media,.welcome-grade,.welcome-grain,.welcome-light{position:absolute;inset:0;pointer-events:none}
+.welcome-media{z-index:0;overflow:hidden;background:#0b142a url(../assets/images/backgrounds/afcsc-video-poster.jpg) center / cover no-repeat}
+.welcome-video{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:50% 51%;transform:scale(1.05);filter:brightness(.85) contrast(1.07) saturate(.85);will-change:transform}
+/* Multiple grades preserve type readability without disguising the real AFCSC footage. */
+.welcome-grade{background:
+ linear-gradient(90deg,rgba(5,10,25,.98) 0%,rgba(6,11,29,.96) 23%,rgba(8,14,35,.89) 39%,rgba(9,16,39,.65) 53%,rgba(8,14,31,.18) 78%,rgba(6,10,22,.26) 100%),
+ linear-gradient(0deg,rgba(5,10,23,.96) 0%,rgba(7,13,30,.38) 21%,transparent 52%,rgba(5,10,28,.47) 100%),
+ linear-gradient(110deg,rgba(37,34,109,.24),rgba(25,50,104,.14) 64%,rgba(8,15,38,.32))}
+.welcome-grain{opacity:.16;mix-blend-mode:soft-light;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.12) 3px 4px),repeating-linear-gradient(90deg,rgba(10,15,27,.25) 0 2px,transparent 2px 5px);background-size:7px 7px,5px 5px}
+.welcome-light{background:radial-gradient(ellipse 42% 60% at 76% 55%,rgba(120,173,235,.12),transparent 70%),radial-gradient(ellipse 40% 65% at 0% 40%,rgba(28,32,111,.16),transparent 75%)}
+.welcome-layout{position:relative;z-index:2;height:100%;width:100%;padding:clamp(32px,4.9vw,86px) clamp(35px,6vw,118px) clamp(25px,4vw,64px);display:flex;flex-direction:column;justify-content:space-between;gap:1rem}
+.welcome-mast,.welcome-footer{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.welcome-mast{min-height:5.2rem;flex:none;padding-bottom:1.1rem;border-bottom:1px solid rgba(203,221,255,.21)}
+.welcome-brand{display:flex;align-items:center;gap:1rem;min-width:0}
+.welcome-brand img{width:3.2rem;height:4.2rem;object-fit:contain;filter:drop-shadow(0 0 16px rgba(0,0,0,.5))}
+.welcome-brandcopy{min-width:0;display:flex;flex-direction:column;gap:.35rem}
+.welcome-brandcopy>span{font:500 .82rem/1.2 var(--cond);letter-spacing:.20em;color:#c2cfeb;text-transform:uppercase}
+.welcome-brandcopy strong{font:600 1.18rem/1.2 var(--cond);letter-spacing:.22em;color:#f5f6fa}
+.welcome-brandcopy i{font-style:normal;color:var(--sky);font-weight:500}
+.welcome-edition{display:flex;align-items:center;gap:.8rem;white-space:nowrap;font:600 .94rem/1.2 var(--cond);letter-spacing:.24em;color:#d7e0f1;text-transform:uppercase}
+.edition-rule{width:1.8rem;height:.12rem;background:linear-gradient(90deg,var(--red),var(--gold))}
+.edition-no{margin-left:1.4rem;color:var(--sky);opacity:.85}
+.welcome-story{max-width:min(57rem,67%);align-self:flex-start;position:relative;margin-top:.3rem;margin-bottom:1rem;transform:translateY(-.3rem)}
+.welcome-accent{width:3rem;height:.16rem;border-radius:2px;background:linear-gradient(90deg,var(--red) 0 66%,var(--gold) 66% 100%);margin-bottom:1.55rem;box-shadow:0 0 22px rgba(229,36,48,.27)}
+.welcome-eyebrow{margin:0 0 1.1rem;color:#b3dafa;font:600 1.12rem/1.1 var(--cond);letter-spacing:.25em;text-transform:uppercase}
+.welcome-title{font:500 clamp(5rem,5.2vw,6.5rem)/.92 var(--disp);letter-spacing:-.026em;margin:0;color:#fffdf8;text-shadow:0 .4rem 3rem rgba(0,0,0,.35);white-space:nowrap}
+.headline-clip{display:block;overflow:hidden;padding:.1em 0 .13em;margin:-.1em 0 -.1em}
+.headline-line{display:inline-block;will-change:transform}
+.headline-stop{color:var(--gold)}
+.welcome-description{font:400 clamp(1.33rem,1.45vw,1.78rem)/1.48 var(--body);max-width:39rem;color:#d6def0;margin:2rem 0 2.65rem;text-wrap:balance}
+.welcome-buttons{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+#welcome .welcome-buttons>.btn{min-height:5.5rem;min-width:18rem;padding:0 2.25rem;border-radius:100px;font:600 1.35rem/1 var(--cond);letter-spacing:.14em;box-shadow:none;touch-action:manipulation;transition:background-color .18s,border-color .18s,box-shadow .18s}
+#welcome .welcome-primary{background:linear-gradient(120deg,#de2133,#b51630);border:1px solid rgba(255,255,255,.4);box-shadow:0 .6rem 2rem rgba(214,28,50,.24)!important}
+#welcome .welcome-secondary{background:rgba(15,24,48,.52);border:1px solid rgba(204,229,255,.36);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+#welcome .welcome-buttons>.btn svg{width:1.7rem;height:1.7rem;transition:transform .24s ease}
+#welcome .welcome-buttons>.btn:hover svg{transform:translateX(.32rem)}
+#welcome .welcome-buttons>.btn:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+.welcome-footer{min-height:4.2rem;border-top:1px solid rgba(203,221,255,.23);padding-top:1.45rem;flex:none;font:600 1rem/1.2 var(--cond);letter-spacing:.19em;text-transform:uppercase;color:#c5d3e8}
+.welcome-catalogue,.welcome-playback{display:flex;align-items:center;gap:1.2rem}
+.welcome-catalogue strong{font:500 2.1rem/1 var(--disp);letter-spacing:0;color:#f8f7f4;vertical-align:middle;margin-right:.4rem}
+.catalogue-divider{height:1.5rem;border-left:1px solid rgba(203,221,255,.35)}
+.welcome-led{flex:none;width:.5rem;height:.5rem;border-radius:50%;background:var(--red);box-shadow:0 0 0 .3rem rgba(228,31,40,.13),0 0 12px rgba(228,31,40,.62)}
+.welcome-film-label{font:.86rem/1.3 var(--cond);letter-spacing:.21em;color:rgba(213,225,243,.79)}
+.welcome-film-label span{padding:0 .35rem;color:var(--red)}
+.welcome-video-toggle{display:flex;align-items:center;justify-content:center;gap:.7rem;min-width:9.8rem;min-height:3.85rem;padding:0 1.1rem;border-radius:100px;border:1px solid rgba(205,226,255,.36);background:rgba(10,17,39,.57);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);font:600 .98rem/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:#fff;transition:border-color .2s,background-color .2s}
+.welcome-video-toggle:hover,.welcome-video-toggle:focus-visible{border-color:var(--sky);background:rgba(36,48,82,.7)}
+.welcome-video-toggle svg{width:1.1rem;height:1.1rem;stroke-width:2.5}
+.welcome-video-toggle .video-play{display:none}
+.welcome-video-toggle[aria-pressed="true"] .video-pause{display:none}
+.welcome-video-toggle[aria-pressed="true"] .video-play{display:block}
+.welcome-film-progress{height:2px;position:absolute;inset:auto 0 0;z-index:3;background:rgba(255,255,255,.10);pointer-events:none}
+.welcome-film-progress i{display:block;width:0%;height:100%;background:linear-gradient(90deg,var(--red) 30%,var(--gold));box-shadow:0 0 10px rgba(228,31,40,.35);transition:width .16s linear}
+/* Portrait panels are never displayed on the welcome: the authentic film is the focal artwork. */
+@media(max-aspect-ratio:16/10) and (min-aspect-ratio:1/1){
+ .welcome-story{max-width:70%}
+ .welcome-title{font-size:clamp(4.3rem,5.2vw,6.5rem)}
+ .welcome-description{margin:1.4rem 0 1.8rem}
+ .welcome-film-label{display:none}
+}
+@media(max-width:1180px){
+ .welcome-layout{padding:2rem 3.1rem 2.2rem}
+ .welcome-title{font-size:clamp(4rem,5.5vw,6.3rem)}
+ .welcome-description{max-width:35rem;margin:1.2rem 0 1.8rem}
+ .welcome-story{max-width:75%}
+ .welcome-edition{font-size:.76rem}
+ .welcome-brandcopy>span{font-size:.72rem}
+ .welcome-buttons{gap:.8rem}
+ #welcome .welcome-buttons>.btn{min-height:4.6rem;min-width:15.3rem;font-size:1.12rem;padding:0 1.65rem}
+ .welcome-film-label{display:none}
+}
+@media(max-height:720px) and (min-aspect-ratio:1/1){
+ .welcome-layout{padding-top:1.8rem;padding-bottom:1.7rem}
+ .welcome-mast{min-height:4rem}
+ .welcome-brand img{height:3.6rem;width:2.9rem}
+ .welcome-story{transform:none}
+ .welcome-accent{margin-bottom:.95rem}
+ .welcome-eyebrow{margin-bottom:.55rem;font-size:1rem}
+ .welcome-title{font-size:clamp(4.1rem,5.65vw,6.5rem)}
+ .welcome-description{margin:1rem 0 1.6rem;font-size:1.25rem}
+ .welcome-footer{padding-top:.85rem}
+}
+@media(max-width:750px){
+ .welcome-layout{padding:1.6rem}
+ .welcome-edition{display:none}
+ .welcome-story{max-width:100%;padding-top:2rem}
+ .welcome-title{font-size:clamp(3.7rem,8vw,6.1rem)}
+ .welcome-buttons>.btn{width:100%}
+ .welcome-footer{gap:.5rem}
+ .welcome-catalogue{gap:.6rem;letter-spacing:.07em}
+}
+@media(prefers-reduced-motion:reduce){
+ .welcome-video{transform:none!important}
+ .welcome-film-progress i,.welcome-video-toggle,.welcome-buttons>.btn{transition:none!important}
+}

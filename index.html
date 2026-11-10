@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AFCSC — The Legacy of Air Warfare Educators</title>
+<link rel="icon" href="assets/icons/app.ico">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/welcome-film.css">
+<link rel="stylesheet" href="css/timeline-cinematic.css">
+<link rel="stylesheet" href="css/shared-archive-backgrounds.css">
+<link rel="stylesheet" href="css/welcome-firewatch.css">
+</head>
+<body>
+<div id="stage">
+  <div id="bg" aria-hidden="true">
+    <div class="bg-grad"></div>
+    <div class="bg-layer bg-grid" data-depth="14"></div>
+    <div class="bg-layer bg-radar" data-depth="26"><i></i></div>
+    <div class="bg-layer bg-glow g1" data-depth="40"></div>
+    <div class="bg-layer bg-glow g2" data-depth="-30"></div>
+    <div class="bg-vignette"></div>
+  </div>
+
+  <!-- 01 PRELOADER -->
+  <section id="preloader" aria-label="Loading">
+    <div class="pl-radar"><i class="pl-sweep"></i>
+      <svg viewBox="0 0 800 800" class="pl-rings"><g fill="none" stroke-width="1.5">
+        <circle cx="400" cy="400" r="150" stroke="#A2D9F7" pathLength="1"/><circle cx="400" cy="400" r="230" stroke="#E41F28" pathLength="1"/>
+        <circle cx="400" cy="400" r="310" stroke="#FBED03" pathLength="1"/><circle cx="400" cy="400" r="385" stroke="#A2D9F7" stroke-opacity=".5" pathLength="1"/>
+        <path d="M400 0V800M0 400H800" stroke="#A2D9F7" stroke-opacity=".35" pathLength="1"/><path d="M118 118L682 682M682 118L118 682" stroke="#A2D9F7" stroke-opacity=".15" pathLength="1"/></g></svg>
+    </div>
+    <div class="pl-core">
+      <div class="pl-logo"><img src="assets/images/logo/afcsc-logo.png" alt="Armed Forces Command and Staff College crest"></div>
+      <h1 class="pl-title" data-split>ARMED FORCES COMMAND AND STAFF COLLEGE</h1>
+      <h2 class="pl-dept" data-split>DEPARTMENT OF AIR WARFARE</h2>
+      <p class="pl-sub">Preserving the Legacy of Air Warfare Education</p>
+      <div class="pl-meter" role="progressbar" aria-label="Assets ready" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><b></b></div>
+      <div class="pl-status"><span id="plCount">Preparing exhibition…</span></div>
+    </div>
+    <button class="btn ghost pl-skip" id="plSkip" type="button">Tap to enter</button>
+  </section>
+
+  <!-- 02 WELCOME — cinema-scale AFCSC video with Firewatch-inspired vertical menu -->
+  <section class="view welcome-film welcome-firewatch" id="welcome" aria-label="Welcome to the Instructors' Chronicle" hidden>
+    <div class="welcome-media" aria-hidden="true">
+      <video id="welcomeVideo" class="welcome-video" autoplay muted loop playsinline preload="auto"
+        poster="assets/images/backgrounds/afcsc-video-poster.jpg">
+        <source src="assets/videos/afcsc-arrival.mp4" type="video/mp4">
+      </video>
+      <div class="welcome-grade"></div>
+      <div class="welcome-grain"></div>
+      <div class="welcome-light"></div>
+    </div>
+    <div class="welcome-layout">
+      <header class="welcome-mast">
+        <div class="welcome-brandcopy">
+          <span>Armed Forces Command and Staff College</span>
+        </div>
+        <div class="welcome-edition"><span class="edition-rule"></span> THE HERITAGE ARCHIVE <span class="edition-no">EXHIBITION 01</span></div>
+      </header>
+
+      <div class="welcome-main">
+        <main class="welcome-story">
+          <div class="welcome-accent" aria-hidden="true"></div>
+          <p class="welcome-eyebrow">AN INTERACTIVE HISTORY OF INSTRUCTION</p>
+          <h1 class="welcome-title" id="wTitle" aria-label="The Instructors' Chronicle">
+            <span class="headline-clip"><span class="headline-line">THE INSTRUCTORS’</span></span>
+            <span class="headline-clip"><span class="headline-line">CHRONICLE<span class="headline-stop">.</span></span></span>
+          </h1>
+          <p class="welcome-description">Discover the Directing Staff of the Department of Air Warfare.</p>
+        </main>
+
+        <nav class="welcome-menu" aria-label="Choose exhibition section">
+          <div class="welcome-menu-crest">
+            <img src="assets/images/logo/afcsc-logo.png" alt="Armed Forces Command and Staff College crest" width="86" height="110">
+            <strong>DEPARTMENT OF AIR WARFARE <i>· JAJI</i></strong>
+          </div>
+          <div class="welcome-menu-rule" aria-hidden="true"><i></i></div>
+          <div class="welcome-buttons" role="group" aria-label="Explore the exhibition">
+            <button class="btn primary big welcome-option welcome-primary" type="button" data-go="archive">
+              <span class="welcome-option-num" aria-hidden="true">01</span>
+              <span class="welcome-option-label">Explore Instructors</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <button class="btn glassy big welcome-option welcome-secondary" type="button" data-go="timeline">
+              <span class="welcome-option-num" aria-hidden="true">02</span>
+              <span class="welcome-option-label">View Timeline</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+          <div class="welcome-menu-under" aria-hidden="true"><span></span><i></i><span></span></div>
+        </nav>
+      </div>
+
+      <footer class="welcome-footer">
+        <div class="welcome-catalogue" aria-label="Archive coverage">
+          <div class="welcome-led" aria-hidden="true"></div>
+          <span><strong>429</strong> DIRECTING STAFF RECORDS</span>
+          <span class="catalogue-divider" aria-hidden="true"></span>
+          <span>1976 — 2026</span>
+        </div>
+        <div class="welcome-playback">
+          <span class="welcome-film-label">AFCSC JAJI <span aria-hidden="true">/</span> EXHIBITION FILM</span>
+          <button id="welcomeMotion" class="welcome-video-toggle" type="button" aria-pressed="false" aria-label="Pause background video">
+            <svg class="video-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+            <svg class="video-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+            <span id="welcomeMotionLabel">Pause film</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+    <div class="welcome-film-progress" aria-hidden="true"><i id="filmProgress"></i></div>
+  </section>
+
+  <!-- 03 ARCHIVE -->
+  <section class="view" id="archive" aria-label="The Instructors Archive" hidden>
+    <aside class="a-side glass" aria-label="Search and filters">
+      <div class="a-sidehead"><p class="kicker"><span></span>Find an instructor</p></div>
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input id="q" type="search" placeholder="Search name, rank, specialty…" autocomplete="off" spellcheck="false" aria-label="Search instructors">
+        <button type="button" class="icon-btn" id="kbdBtn" aria-label="Show on-screen keyboard"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></button>
+      </div>
+      <div class="fgroup"><h3>Period</h3><div class="chips" id="fDec"></div></div>
+      <div class="fgroup"><h3>Rank</h3><div class="chips" id="fRank"></div></div>
+      <div class="fgroup"><h3>Record</h3><div class="chips" id="fRec"></div></div>
+      <div class="fgroup grow"><h3>Specialty</h3><div class="chips scrolly" id="fSpec"></div></div>
+      <button class="btn ghost reset" id="reset" type="button">Reset all filters</button>
+    </aside>
+    <div class="a-main scroll" id="aScroll">
+      <header class="a-head">
+        <p class="kicker"><span></span>The Instructors' Chronicle</p>
+        <h2 class="h-disp">Directing Staff of the Department</h2>
+        <p class="a-sub">The complete nominal roll, in order of appointment. Details are shown exactly as recorded; missing information is marked for verification.</p>
+      </header>
+      <section class="featured" aria-label="Featured selection">
+        <div class="f-bar"><h3>Featured selection <small>12 records with documented chronicle appointments · demonstration selection</small></h3>
+          <div class="f-arrows"><button class="icon-btn lg" type="button" id="fPrev" aria-label="Previous featured"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button class="icon-btn lg" type="button" id="fNext" aria-label="Next featured"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+        <div class="f-wrap" id="fWrap"><div class="f-track" id="fTrack"></div></div>
+      </section>
+      <section class="roll" id="rollTop" aria-label="Complete archive">
+        <div class="r-bar"><h3 id="rCount" aria-live="polite"></h3><div class="r-chips" id="rActive"></div></div>
+        <div class="grid" id="grid"></div>
+        <div class="empty" id="empty" hidden></div>
+        <nav class="pager" id="pager" aria-label="Pages"></nav>
+      </section>
+    </div>
+  </section>
+
+  <!-- 05 TIMELINE — cinematic service chronology, inspired by the supplied reference -->
+  <section class="view timeline-cinema" id="timeline" aria-label="Historical timeline" hidden>
+    <div class="t-atmosphere" aria-hidden="true"><i class="t-ambient-haze"></i></div>
+    <header class="t-top">
+      <div class="t-editorial">
+        <p class="kicker"><span></span>THE HISTORICAL TIMELINE <small> / AN ARCHIVE OF SERVICE</small></p>
+        <h2 class="t-display">THE YEARS <em>OF INSTRUCTION.</em></h2>
+        <p class="t-top-hint">Explore the officers and appointments recorded through the decades.</p>
+      </div>
+      <div class="t-current" aria-label="Selected archive period">
+        <div class="t-current-left"><span class="t-tiny">CURRENTLY EXPLORING</span><div class="t-big"><b id="tBig">1980</b><em id="tUnit">s</em></div></div>
+        <div class="t-ctrl"><button class="icon-btn lg" id="tPrevDec" type="button" aria-label="Previous decade"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="icon-btn lg" id="tNextDec" type="button" aria-label="Next decade"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div>
+      </div>
+    </header>
+    <div class="t-rail glass" aria-label="Browse decades">
+      <div class="t-rail-label"><span class="t-tiny">01 / SELECT THE DECADE</span><div class="t-rail-text">Navigate the historical record</div></div>
+      <div class="t-decs" id="tDecs"></div>
+      <div class="t-line" aria-hidden="true"><i id="tProg"></i></div>
+    </div>
+    <div class="t-utility">
+      <div class="t-years" id="tYears" aria-label="Filter records by year"></div>
+      <p class="t-sub" id="tSub" aria-live="polite"></p>
+    </div>
+    <div class="t-stage" aria-label="Drag the timeline horizontally to explore instructor records">
+      <div class="t-stage-glow" aria-hidden="true"></div>
+      <button class="t-stage-arrow t-l" id="tL" type="button" aria-label="Browse earlier records"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="t-wrap" id="tWrap"><div class="t-track" id="tTrack"></div></div>
+      <button class="t-stage-arrow t-r" id="tR" type="button" aria-label="Browse later records"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <footer class="t-footer">
+      <div class="t-scroll-feedback"><span class="t-feedback-dot" aria-hidden="true"></span><span id="tGalleryCount">ARCHIVE RECORDS</span></div>
+      <button class="t-auto-btn is-running" id="tAuto" type="button" aria-pressed="true" aria-label="Pause automatic timeline movement"><span class="t-auto-dot" aria-hidden="true"></span><span id="tAutoLabel">AUTO-GLIDE ON</span></button>
+      <div class="t-journey"><i id="tJourneyProgress"></i></div>
+      <div class="t-drag-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12V7a2 2 0 0 1 4 0v4-6a2 2 0 0 1 4 0v6a2 2 0 0 1 4 0v5c0 4-3 6-7 6h-2c-3 0-5-2-7-5l-2-3a2 2 0 0 1 3-2l3 3"/></svg> DRAG TO TRAVEL THROUGH TIME <span>·</span> TAP AN OFFICER TO EXPLORE</div>
+    </footer>
+  </section>
+
+  <!-- 07 CLOSING -->
+  <section class="view" id="closing" aria-label="Closing" hidden>
+    <div class="c-orbit" id="cOrbit" aria-hidden="true"></div>
+    <div class="c-core"><img src="assets/images/logo/afcsc-logo.png" alt="AFCSC crest" class="c-logo">
+      <h2 class="c-msg" id="cMsg" data-split>A LEGACY OF KNOWLEDGE. A TRADITION OF SERVICE.</h2>
+      <p class="c-sub">Thank you for exploring the instructors of the Department of Air Warfare.</p>
+      <div class="w-actions c-actions"><button class="btn primary big mag" type="button" data-act="home">Return to Home</button>
+        <button class="btn glassy big mag" type="button" data-go="archive">Keep exploring</button></div></div>
+  </section>
+
+  <!-- 04 DETAIL (overlay) -->
+  <section id="detail" aria-label="Instructor profile" hidden>
+    <div class="d-back"></div>
+    <div class="d-wrap">
+      <div class="d-frame" id="dFrame"></div>
+      <article class="d-panel glass scroll" id="dPanel" tabindex="-1"></article>
+    </div>
+    <div class="d-bar glass"><button class="btn glassy" type="button" data-act="back"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Back to <span id="dBackTo">archive</span></button>
+      <span class="d-count" id="dCount"></span>
+      <div><button class="btn glassy" type="button" id="dPrev"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Previous</button>
+      <button class="btn primary" type="button" id="dNext">Next<svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+  </section>
+
+  <!-- chrome -->
+  <header id="topbar" hidden>
+    <button class="brand mag" type="button" data-act="home" aria-label="Home"><img src="assets/images/logo/afcsc-logo.png" alt=""><span><b>AFCSC · DAW</b><small>Legacy of Air Warfare Educators</small></span></button>
+    <nav class="tabs" aria-label="Sections">
+      <button type="button" class="tab" data-tab="archive" data-go="archive">Instructors</button>
+      <button type="button" class="tab" data-tab="timeline" data-go="timeline">Timeline</button>
+      <button type="button" class="tab" data-tab="closing" data-go="closing">Finish</button>
+    </nav>
+    <div class="tools">
+      <button type="button" class="btn glassy sm" data-act="back" id="tbBack"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Back</button>
+      <button type="button" class="btn glassy sm" data-act="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></svg>Home</button>
+      <button type="button" class="icon-btn" id="motionBtn" aria-pressed="true" aria-label="Toggle ambient animation" title="Ambient animation"><svg viewBox="0 0 24 24"><path d="M3 12c3-6 6-6 9 0s6 6 9 0"/></svg></button>
+      <button type="button" class="btn danger sm" data-act="exit">Exit</button>
+    </div>
+  </header>
+
+  <div id="kbd" class="glass" hidden aria-label="On-screen keyboard"></div>
+  <div id="idlebar" class="glass" hidden><span>Returning to the welcome screen in <b id="idleN">15</b>s</span><button class="btn primary sm" type="button" id="idleStay">Touch to stay</button></div>
+  <div id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle"><div class="m-card glass">
+    <h3 id="mTitle">Exit the exhibition?</h3><p id="mText">The exhibition will close. Choose Cancel to keep exploring.</p>
+    <div class="m-actions"><button class="btn glassy" type="button" id="mCancel">Cancel</button><button class="btn danger" type="button" id="mOk">Confirm exit</button></div></div></div>
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="fx" aria-hidden="true"></div>
+</div>
+<noscript>This exhibition requires JavaScript.</noscript>
+<script src="js/lib/gsap.min.js"></script>
+<script src="js/lib/Draggable.min.js"></script>
+<script src="js/lib/InertiaPlugin.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
